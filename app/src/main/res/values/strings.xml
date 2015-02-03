@@ -2,7 +2,15 @@
 <resources>
 
     <string name="app_name">CustomListView</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Main item 1</string>
+    <string name="action_other">Main menu Two</string>
     <string name="hello_world">Hello world!</string>
+    <string name="i0t">item0</string>
+    <string name="i1t">Main item 0</string>
+    <string name="subitem1">subitem 0</string>
+    <string name="subitem2">subitem 1</string>
+    <string name="i2t">item 2</string>
+    <string name="unlock_item">unlock</string>
+    <string name="lock_item">lock</string>
 
 </resources>

@@ -4,6 +4,7 @@ package learn2crack.customlistview;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -101,6 +102,20 @@ public class MainActivity extends Activity {
 		});
 
 	}
+
+    // creando el menu ppal
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // alternativa
+        // MenuInflater inflater = getMenuInflater();
+        // inflater.inflate(R.menu.main,menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {

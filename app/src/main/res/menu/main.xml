@@ -6,4 +6,31 @@
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
+
+    <item
+        android:id="@+id/item0"
+        android:icon="@drawable/coreldrawfff"
+        android:showAsAction="always"
+        android:title="@string/i0t"/>
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/baidu"
+        android:showAsAction=""
+        android:title="@string/i1t">
+        <menu>
+            <item
+                android:id="@+id/subitem1"
+                android:icon="@drawable/baidu"
+                android:title="@string/subitem1"/>
+            <item
+                android:id="@+id/subitem2"
+                android:icon="@drawable/baidu"
+                android:title="@string/subitem2"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:icon="@drawable/bookmark"
+        android:showAsAction="always|withText"
+        android:title="@string/i2t"/>
 </menu>
