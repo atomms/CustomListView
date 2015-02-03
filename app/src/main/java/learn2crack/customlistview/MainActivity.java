@@ -3,6 +3,9 @@ package learn2crack.customlistview;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -10,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,12 +33,36 @@ public class MainActivity extends Activity {
 
 	};
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// añadir content
+        // etiqueta para desplegar menu contextual
+        ImageButton imagebutton = (ImageButton) findViewById(R.id.imageButton);
+        registerForContextMenu(imagebutton);
+
+
+//    public boolean onContextItemSelected(MenuItem item) {
+//        // TextView textview2 = (TextView) findViewById(R.id.textView2);
+////		gridcontrol = (TextView) findViewById(R.id.textView2);
+//        switch (item.getItemId()) {
+//            case R.id.CtxtOpt1:
+//                gridcontrol.setText("clicked context 1");
+//                return true;
+//            case R.id.CtxtOpt2:
+//                gridcontrol.setText("clicked context 2");
+//                return true;
+//            default:
+//                return super.onContextItemSelected(item);
+//        }
+//    }
+
+
+
+
+        // añadir content
 		CustomList adapter = new CustomList(MainActivity.this, web, content,
 				imageId);
 		list = (ListView) findViewById(R.id.list);
@@ -73,5 +101,16 @@ public class MainActivity extends Activity {
 		});
 
 	}
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+        {
+            super.onCreateContextMenu(menu, v, menuInfo);
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.menuctx, menu);
+        }
+    }
 
 }
