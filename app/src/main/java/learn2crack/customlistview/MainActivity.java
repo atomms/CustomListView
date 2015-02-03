@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 public class MainActivity extends Activity {
-	ListView list;
+	GridView list;
 	String[] web = { "Google Plus", "Twitter", "Windows", "Bing", "Itunes",
 			"Wordpress", "Drupal" };
 	String[] content = { "nice tool", "you know...", "shit!", "sorry?",
@@ -41,7 +42,7 @@ public class MainActivity extends Activity {
 		// añadir content
 		CustomList adapter = new CustomList(MainActivity.this, web, content,
 				imageId);
-		list = (ListView) findViewById(R.id.list);
+		list = (GridView) findViewById(R.id.list);
 		// final TextView txtNombre = (TextView)findViewById(R.id.txt);
 		// final ImageView img1 = (ImageView)findViewById(R.id.img);
 		list.setAdapter(adapter);
