@@ -1,10 +1,5 @@
 package learn2crack.customlistview;
 
-//import com.example.intent00.Intent00;
-//import com.example.intent00.OpenDialog;
-//import com.example.intent00.R;
-
-//import com.example.intent00.R;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -76,48 +72,6 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// @Override
-		// protected void onListItemClick(ListView lista, View vista, int
-		// posicion, long id)
-		// {
-		// super.onListItemClick(lista, vista, posicion, id);
-		// String nombrePractica = practicas[posicion];
-		// try
-		// {
-		// Toast t= Toast.makeText(this, nombrePractica, Toast.LENGTH_SHORT);
-		// t.show();
-		// Class <?> clase = Class.forName("es.raul.listainterfaces."+
-		// nombrePractica);
-		// Intent intent = new Intent(this,clase);
-		// startActivity(intent);
-		// }
-		// catch (ClassNotFoundException e)
-		// {
-		// Log.d(tag1, e.getMessage());
-		// }
-		// }
-
-		// img1.setOnClickListener(new OnClickListener() {
-		// @Override
-		// public void onClick(View v) {
-		// // //abrimos un diálogo que confirma el envío
-		// // AlertDialog.Builder alert = new AlertDialog.Builder(null);
-		// // alert.setMessage("guay");
-		// // alert.setPositiveButton("ok",null);
-		// //// AlertDialog cosa = alert.create();
-		// // alert.show();
-		//
-		// //Creamos el Intent
-		// Intent intent = new Intent(MainActivity.this, OpenDialog.class);
-		// //Creamos la información a pasar entre actividades
-		// Bundle b = new Bundle();
-		// b.putString("NOMBRE", txtNombre.getText().toString());
-		// //Añadimos la información al intent
-		// intent.putExtras(b);
-		// //Iniciamos la nueva actividad
-		// startActivity(intent);
-		// }
-		// });
 	}
 
 }
