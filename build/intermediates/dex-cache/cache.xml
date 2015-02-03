@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/usr/share/android-studio-0.8/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="/home/ernesto/Documentos/MisDocumentos/UEM/DI/PI/2014-15/CustomListView/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-f0f21e4b7af5d1c081e2cd97f2edb4dbe5649e55.jar" />
+    </item>
+
+</items>
