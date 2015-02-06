@@ -1,29 +1,27 @@
 package learn2crack.customlistview;
 
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Intent;
 
+
+
 public class MainActivity extends Activity {
 	ListView list;
+    public ImageButton imagebutton;
+
 	String[] web = { "Google Plus", "Twitter", "Windows", "Bing", "Itunes",
 			"Wordpress", "Drupal" };
 	String[] content = { "nice tool", "you know...", "shit!", "sorry?",
@@ -41,34 +39,15 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
         // etiqueta para desplegar menu contextual
-        ImageButton imagebutton = (ImageButton) findViewById(R.id.imageButton);
+        imagebutton = (ImageButton) findViewById(R.id.imageButton);
         registerForContextMenu(imagebutton);
-
-
-//    public boolean onContextItemSelected(MenuItem item) {
-//        // TextView textview2 = (TextView) findViewById(R.id.textView2);
-////		gridcontrol = (TextView) findViewById(R.id.textView2);
-//        switch (item.getItemId()) {
-//            case R.id.CtxtOpt1:
-//                gridcontrol.setText("clicked context 1");
-//                return true;
-//            case R.id.CtxtOpt2:
-//                gridcontrol.setText("clicked context 2");
-//                return true;
-//            default:
-//                return super.onContextItemSelected(item);
-//        }
-//    }
-
-
 
 
         // añadir content
 		CustomList adapter = new CustomList(MainActivity.this, web, content,
 				imageId);
 		list = (ListView) findViewById(R.id.list);
-		// final TextView txtNombre = (TextView)findViewById(R.id.txt);
-		// final ImageView img1 = (ImageView)findViewById(R.id.img);
+
 		list.setAdapter(adapter);
 		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -115,6 +94,51 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    // eventos del menu ActionBar
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // TextView textview2 = (TextView) findViewById(R.id.textView2);
+//		textview1 = (TextView) findViewById(R.id.textView2);
+        switch (item.getItemId()) {
+            case R.id.mainitem0:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+                              return true;
+            case R.id.mainitem1:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+                return true;
+            case R.id.mainitem2:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+
+                return true;
+            case R.id.mainitem3:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+
+                return true;
+            case R.id.subitem1:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+                return true;
+            case R.id.subitem2:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
@@ -127,5 +151,20 @@ public class MainActivity extends Activity {
             inflater.inflate(R.menu.menuctx, menu);
         }
     }
-
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.subitem1:
+//                imagebutton.setImageResource(imagebutton.get("blah"));
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+                return true;
+            case R.id.subitem2:
+                Toast.makeText(MainActivity.this,
+                        "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
+                        .show();
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
 }

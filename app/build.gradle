@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "learn2crack.customlistview"
-        targetSdkVersion 19
+        targetSdkVersion 18
     }
 
     buildTypes {

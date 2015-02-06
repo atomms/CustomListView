@@ -35,16 +35,16 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080002;
-        public static final int action_settings=0x7f080008;
         public static final int ctxoption1=0x7f08000e;
         public static final int ctxoption2=0x7f08000f;
         public static final int imageButton=0x7f080000;
         public static final int img=0x7f080004;
-        public static final int item0=0x7f080009;
-        public static final int item1=0x7f08000a;
-        public static final int item2=0x7f08000d;
         public static final int list=0x7f080001;
         public static final int lv1=0x7f080005;
+        public static final int mainitem0=0x7f080008;
+        public static final int mainitem1=0x7f080009;
+        public static final int mainitem2=0x7f08000a;
+        public static final int mainitem3=0x7f08000d;
         public static final int subitem1=0x7f08000b;
         public static final int subitem2=0x7f08000c;
         public static final int textView1=0x7f080003;
