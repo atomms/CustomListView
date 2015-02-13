@@ -139,15 +139,16 @@ public class MainActivity extends Activity {
     }
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.subitem1:
-//                imageview.setImageResource(R.drawable.bookmark);
-//                imageview.setColorFilter(Color.argb(255, 255, 0, 0));
+            case R.id.ctxoption1:
+//                                imageview.setImageResource(R.drawable.bookmark);
+                imageview.setBackgroundColor(Color.argb(255, 255, 0, 0));
 
                 Toast.makeText(MainActivity.this,
                         "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
                         .show();
                 return true;
-            case R.id.subitem2:
+            case R.id.ctxoption2:
+                imageview.setBackgroundColor(Color.argb(0, 255, 0, 0));
                 Toast.makeText(MainActivity.this,
                         "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
                         .show();
