@@ -9,16 +9,16 @@
     tools:context=".MainActivity" >
 
 
-    <ImageButton
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:id="@+id/imageButton"
+        android:id="@+id/imageView"
         android:src="@android:drawable/ic_lock_idle_lock"/>
 
     <ListView
        android:id="@+id/list"
-        android:layout_below="@+id/imageButton"
+        android:layout_below="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         >

@@ -1,8 +1,9 @@
 package learn2crack.customlistview;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -11,16 +12,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.app.Activity;
-import android.content.Intent;
 
 
 
 public class MainActivity extends Activity {
 	ListView list;
-    public ImageButton imagebutton;
+    public ImageView imageview;
 
 	String[] web = { "Google Plus", "Twitter", "Windows", "Bing", "Itunes",
 			"Wordpress", "Drupal" };
@@ -39,8 +39,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
         // etiqueta para desplegar menu contextual
-        imagebutton = (ImageButton) findViewById(R.id.imageButton);
-        registerForContextMenu(imagebutton);
+        imageview = (ImageView) findViewById(R.id.imageView);
+        registerForContextMenu(imageview);
 
 
         // añadir content
@@ -55,19 +55,8 @@ public class MainActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// Creamos el Intent
-				// Intent intent = new Intent(MainActivity.this,
-				// OpenDialog.class);
-				Intent intent = null;
-//				try {
-//					Class<?> clase = Class
-//							.forName("learn2crack.customlistview.OpenDialog");
-					intent = new Intent(
+				Intent intent =  new Intent(
 							MainActivity.this,OpenDialog.class);
-
-//				} catch (ClassNotFoundException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
 
 				// Creamos la información a pasar entre actividades
                 intent.putExtra("web",web[position]);
@@ -86,9 +75,6 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // alternativa
-        // MenuInflater inflater = getMenuInflater();
-        // inflater.inflate(R.menu.main,menu);
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -154,7 +140,9 @@ public class MainActivity extends Activity {
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.subitem1:
-//                imagebutton.setImageResource(imagebutton.get("blah"));
+//                imageview.setImageResource(R.drawable.bookmark);
+//                imageview.setColorFilter(Color.argb(255, 255, 0, 0));
+
                 Toast.makeText(MainActivity.this,
                         "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
                         .show();

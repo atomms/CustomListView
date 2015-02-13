@@ -15,7 +15,7 @@
     <item
         android:id="@+id/mainitem2"
         android:icon="@drawable/baidu"
-        android:showAsAction=""
+        android:showAsAction="always"
         android:title="@string/i1t">
         <menu>
             <item
@@ -31,6 +31,6 @@
     <item
         android:id="@+id/mainitem3"
         android:icon="@drawable/bookmark"
-        android:showAsAction="always|withText"
+        android:showAsAction="always"
         android:title="@string/i2t"/>
 </menu>
