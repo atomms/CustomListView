@@ -142,7 +142,6 @@ public class MainActivity extends Activity {
             case R.id.ctxoption1:
 //                                imageview.setImageResource(R.drawable.bookmark);
                 imageview.setBackgroundColor(Color.argb(255, 255, 0, 0));
-
                 Toast.makeText(MainActivity.this,
                         "You Clicked at " + item.getTitle(), Toast.LENGTH_SHORT)
                         .show();
